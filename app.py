@@ -3,9 +3,11 @@ from tornado.options import options
 from tornado.ioloop import IOLoop
 from logscan import make_app
 from logscan.hendlers import WatcherHandler
+from logscan.hendlers import RuleHandler
 
 router = [
-    (r'/watcher', WatcherHandler)
+    (r'/watcher', WatcherHandler),
+    (r'/rule', RuleHandler)
 ]
 
 
